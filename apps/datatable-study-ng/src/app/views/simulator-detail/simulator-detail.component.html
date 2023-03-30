@@ -1,0 +1,89 @@
+<mat-dialog-actions class="mat-typography">
+  <div style="width: 100%; text-align: right">
+    <h2 style="float: left">Simulator Id:  {{simulator.id}} </h2>
+    <button mat-icon-button (click)="onNoClick()" style="float: right!important;">
+      <mat-icon>close</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Delete this simulator" matTooltipPosition="above" (click)="doSomething()">
+      <mat-icon>delete</mat-icon>
+    </button>
+
+    <button mat-icon-button matTooltip="Edit information" matTooltipPosition="above" (click)="doSomething()">
+      <mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Build simulator" matTooltipPosition="above" (click)="doSomething()">
+      <mat-icon>build</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Download" matTooltipPosition="above" (click)="doSomething()">
+      <mat-icon>get_app</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Run simulation" matTooltipPosition="above">
+      <mat-icon>directions_run</mat-icon>
+    </button>
+  </div>
+</mat-dialog-actions>
+<div mat-dialog-content class="mat-typography">
+  <mat-dialog-content>
+    <h2> Name: <span> {{simulator.name}}</span></h2>
+    <h3><b>Description:</b> <span> {{simulator.description}}</span></h3>
+    <table>
+      <tr>
+        <td><h3><b>Version:</b> <span style="font-weight: normal!important;"> {{simulator.version}}</span></h3></td>
+        <td style="padding-left: 100px;"><h3><b> Website: </b> <a href={{simulator.urls[0].url}} target="_blank ">Goto simulator homepage</a></h3></td>
+        <td> <mat-icon style="padding-bottom: 8px;">open_in_new</mat-icon></td>
+      </tr>
+      <tr>
+        <td> <h3><b> Created: </b>  {{simulatorFormatted.created}} </h3></td>
+        <td style="padding-left: 100px;"><h3><b> Updated: </b> {{simulatorFormatted.updated}} </h3></td>
+      </tr>
+
+    </table>
+
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon  style="padding-bottom: 16px;">group</mat-icon><h3  style="padding-left: 30px"> Authors details </h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          <p>{{simulatorFormatted.authors}}</p>
+        </mat-panel-description>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon  style="padding-bottom: 16px;">settings_applications</mat-icon><h3 style="padding-left: 30px"> Algorithms </h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          <p>{{simulator.description}}</p>
+        </mat-panel-description>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+
+            <mat-icon  style="padding-bottom: 16px;">compare_arrows</mat-icon> <h3 style="padding-left: 30px">Interface Types </h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          <p>{{simulatorFormatted.interfaceType}}</p>
+        </mat-panel-description>
+      </mat-expansion-panel>
+      <mat-expansion-panel [expanded]="false">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon  style="padding-bottom: 16px;">code</mat-icon> <h3> Specification (JSON) </h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+          <pre>{{simulatorFormatted.fullJson}}</pre>
+
+        </mat-panel-description>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-dialog-content>
+</div>
+
+

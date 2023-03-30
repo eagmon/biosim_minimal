@@ -1,0 +1,37 @@
+
+<div class="mat-typography app-page-centered">
+    <div class="page-title">
+      <div style="display: flex; flex-direction: column;  align-items: center; margin-top: 40px;">
+        <img src="../../../assets/images/logo-white.svg" style="height: 80px;margin-right: 8px;" alt="logo">
+        <h1 class="mat-display-1" style="font-size: xx-large; margin-bottom: 10px; margin-top: 40px;">Easily find and
+          obtain BioSimulation tools</h1>
+      </div>
+    </div>
+
+    <div class="container">
+      <div style="display: flex; flex-direction: row;  align-items: center;  ">
+        <mat-card class="card-display  mat-elevation-z8" (click)="goToView('simtbl')">
+          <mat-card-content style="text-align: center">
+            <p><b>Find simulators</b></p>
+            <mat-icon class="icon-display" matTooltip="Find a simulator from the registry that fits your needs">search
+            </mat-icon>
+          </mat-card-content>
+        </mat-card>
+        <img src="../../../assets/images/arrow-icon1.png" style="height: 80px; opacity: 0.25;">
+        <mat-card class="card-display  mat-elevation-z8" (click)="goToView('projects')">
+          <mat-card-content style="text-align: center">
+            <p><b>Find simulations</b></p>
+            <mat-icon class="icon-display" matTooltip="Find a simulation model that is compatible with the simulator  ">
+              search
+            </mat-icon>
+          </mat-card-content>
+        </mat-card>
+
+      </div>
+      <div style="display: flex; flex-direction: row;  align-items: center; margin-top: 20px; ">
+        <p style="margin-left: 80px; margin-right: 80px; font-size: medium; text-align: center">{{page_text}}</p>
+      </div>
+    </div>
+
+  </div>
+

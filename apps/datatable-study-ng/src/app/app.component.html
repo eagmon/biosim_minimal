@@ -1,0 +1,17 @@
+<div class="app-container">
+<mat-toolbar color="primary" class="mat-elevation-z8" style=" z-index: 10; position: sticky; top: 0;">
+
+  <mat-toolbar-row style="height: 80px;">
+    <img src="../assets/images/logo.svg" style="height: 60px;margin-right: 8px;" alt="logo">
+
+    <span class="example-spacer" ></span>
+    <button mat-flat-button color="primary" routerLink="home" >Home</button>
+    <button mat-flat-button color="primary" routerLink="simtbl" >Simulators</button>
+    <button mat-flat-button color="primary" routerLink="projects" >Projects</button>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+<main >
+  <router-outlet></router-outlet>
+</main>
+</div>
